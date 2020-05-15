@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student.active ? (@student.active = false): (@student.active = true)
+    @student.active = !@student.active
     @student.save
     redirect_to @student
   end
